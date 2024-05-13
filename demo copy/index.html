@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Demo | highlight-js</title>
+    <meta
+      name="description"
+      content="A simple, accessible highlightjs plugin to add a copy button to your code blocks."
+    />
+    <meta
+      property="og:image"
+      content="https://repository-images.githubusercontent.com/376601151/45b9bc80-cc37-11eb-936c-c3a55741bf77"
+    />
+    <meta
+      name="twitter:image:src"
+      content="https://repository-images.githubusercontent.com/376601151/45b9bc80-cc37-11eb-936c-c3a55741bf77"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-copy@1.0.3/dist/highlightjs-copy.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/highlightjs-copy@1.0.3/dist/highlightjs-copy.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+
+        <div class="wrapper">
+         
+          <pre><code class="language-js">function readmeDemo() {
+  alert("Hello world!");
+}</code></pre>
+        </div>
+
+
+    <!-- Content -->
+    <script>
+      // hljs.debugMode();
+      hljs.addPlugin(
+        new CopyButtonPlugin()
+      );
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
